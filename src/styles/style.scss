@@ -1,0 +1,52 @@
+//ファイルのインポート
+@import "lib/base";
+@import "lib/layout";
+@import "lib/mixins";
+
+
+body {
+	background-color: #fff;
+	font-family: mc-l;
+}
+
+.bd , th ,td {
+	border: 1px solid #000;
+	border-collapse: collapse;
+	padding: 3px 10px;
+}
+
+#content {
+	width: 300px;
+	margin: 0 auto;
+}
+
+.fadingText-enter {
+	opacity: 0;
+	transform: translate(1000px, 0px) scale(5.0, 5.0);
+}
+
+.fadingText-enter.fadingText-enter-active {
+	opacity: 1;
+	transform: translate(0px, 0px) scale(1.0, 1.0);
+	transition:1000ms;
+}
+
+.fadingText-leave {
+	opacity: 1;
+	transform: scale(1.0, 1.0);
+}
+
+.fadingText-leave.fadingText-leave-active {
+	opacity: 0;
+	transform: scale(0.1, 0.1);
+	transition:800ms;
+}
+
+.fadingText-appear {
+	opacity: 0;
+}
+
+.fadingText-appear.fadingText-appar-active {
+	opacity: 1;
+	transition: 800ms;
+}
