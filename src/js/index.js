@@ -9,7 +9,7 @@ let puts = (str) => {
 	return new Promise((resolve) => {
 		setTimeout(() => {
 			resolve(str);
-		},1000);
+		},10);
 	});
 };
 puts('うんち').then((result) => {
@@ -17,6 +17,20 @@ puts('うんち').then((result) => {
 });
 //promiseの終わり
 
+//なんとなくJavascriptを書いていた人が一歩先に進む本
+let Member = function(firstname,lastname,age) {
+	this.firstname = firstname;
+	this.lastname = lastname;
+	this.age = age;
+	this.getInfo = () => {
+		return this.firstname + this.lastname + '年齢' + this.age; 
+	}
+};
+
+let igarashi = new Member('五十嵐', 'チヒロ', 21);
+let taguchi = new Member('aa', 'bb', 21);
+console.log(igarashi.getInfo());
+console.log(taguchi.getInfo());
 
 
 
