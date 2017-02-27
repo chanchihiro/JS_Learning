@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import make from './components/make_link.js'
 
 
 console.log('start'); //スタート
